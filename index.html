@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Overall Player Prediction</h1>
+
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+     
+        <div class="mb-3">
+            potential
+            <input type="number" class="form-control" name="potential" id="number1">
+        </div>
+
+        <div class="mb-3">
+            value_eur
+            <input type="number" class="form-control" name="value_eur" id="number2">
+        </div>
+
+            release_clause_eur
+            <input type="number" class="form-control" name="release_clause_eur" id="number3">
+        
+        <div class="mb-3">
+            Power
+            <input type="number" class="form-control" name="Power" id="number4">
+        </div>
+
+        <div class="mb-3">
+            wage_eur
+            <input type="number" class="form-control" name="wage_eur" id="number5">
+        </div>
+
+        <div class="mb-3">
+            mentality
+            <input type="number" class="form-control" name="mentality" id="number28">
+        </div>
+
+        <div class="mb-3">
+            international_reputation
+            <input type="number" class="form-control" name="international_reputation" id="number6">
+        </div>
+
+        <div class="mb-3">
+            age
+            <input type="number" class="form-control" name="age" id="number7">
+        </div>
+
+        <div class="mb-3">
+            skills
+            <input type="number" class="form-control" name="skills" id="number8">
+        </div>
+
+        <div class="mb-3">
+            attack
+            <input type="number" class="form-control" name="attack" id="number9">
+        </div>
+
+        <div class="mb-3">
+            passing
+            <input type="number" class="form-control" name="passing" id="number10">
+        </div>
+
+        <div class="mb-3">
+            shooting
+            <input type="number" class="form-control" name="shooting" id="number11">
+        </div>
+
+        <div class="mb-3">
+            movement
+            <input type="number" class="form-control" name="movement" id="number12">
+        </div>
+
+        <div class="mb-3">
+            dribbling
+            <input type="number" class="form-control" name="dribbling" id="number13">
+        </div>
+
+        <div class="mb-3">
+            physic
+            <input type="number" class="form-control" name="physic" id="number14">
+        </div>
+
+        <div class="mb-3">
+            Defence
+            <input type="number" class="form-control" name="Defence" id="number15">
+        </div>
+
+        <div class="mb-3">
+            weight_kg
+            <input type="number" class="form-control" name="weigh_kg" id="number16">
+        </div>
+
+        <div class="mb-3">
+            pace
+            <input type="number" class="form-control" name="pace" id="number17">
+        </div>
+
+        <div class="mb-3">
+            body_type
+            <input type="number" class="form-control" name="body_type" id="number18">
+        </div>
+
+        <div class="mb-3">
+            height
+            <input type="number" class="form-control" name="height" id="number19">
+        </div>
+
+        <div class="mb-3">
+            club
+            <input type="number" class="form-control" name="club" id="number20">
+        </div>
+
+        <div class="mb-3">
+            short_name
+            <input type="number" class="form-control" name="short_name" id="number21">
+        </div>
+
+        <div class="mb-3">
+            Player_position
+            <input type="number" class="form-control" name="Player_position" id="number22">
+        </div>
+
+        <div class="mb-3">
+            G_K
+            <input type="number" class="form-control" name="G_K" id="number23">
+        </div>
+
+        <div class="mb-3">
+            nationality
+            <input type="number" class="form-control" name="nationality" id="number24">
+        </div>
+
+        <div class="mb-3">
+            Preferred_foot
+            <input type="number" class="form-control" name="Preferred_foot" id="number25">
+        </div>
+
+        <div class="mb-3">
+            team_position
+            <input type="number" class="form-control" name="team_position" id="number26">
+        </div>
+
+        <div class="mb-3">
+            nation_position
+            <input type="number" class="form-control" name="nation_position" id="number27">
+        </div>
+
+        <div class="mb-3">
+            work_rate
+            <input type="number" class="form-control" name="work_rate" id="number29">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+ integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+ crossorigin="anonymous"></script>
+
+</body>
+</html>
